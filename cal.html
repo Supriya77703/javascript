@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <label for="">Num1:</label> 
+   <input type="text" name="" id="num1">
+   <label for="">Num2:</label>
+   <input type="text" name="" id="num2">
+   <button type="button" onclick="sum()"> + </button>
+   <button type="button" onclick="difference()"> - </button>
+   
+   <div id="div"></div>
+   <script>
+    function sum(){
+        let num1Elemt= document.getElementById("num1").value;
+        let num2Elemt = document.getElementById("num2").value;
+        let divele = document.getElementById("div");
+        // console.log(num1Elemt)
+        let result = parseInt(num1Elemt)+parseInt(num2Elemt);
+        divele.innerText= result;
+    }
+    function difference(){
+         let num1Elemt= document.getElementById("num1").value;
+        let num2Elemt = document.getElementById("num2").value;
+        let dive = document.getElementById("div");
+         let result = parseInt(num1Elemt)-parseInt(num2Elemt);
+        dive.innerText= result;
+ }
+
+   </script>
+</body>
+</html>
