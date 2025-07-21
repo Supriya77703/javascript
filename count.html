@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .counter {
+            background-color: aqua;
+            height: 180px;
+            width: 300px;
+            text-align: center;
+            /* align-items: center; */
+            justify-content: center;
+            border: 1px solid black;
+        }
+
+        #count {
+            font-weight: 300;
+            margin-bottom: 30px;
+            justify-content: space-between;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 85vh;
+
+        }
+
+        .decrease {
+            align-items: left;
+            /* margin-right: 60px; */
+            background-color: aquamarine;
+            position: relative;
+
+        }
+
+        .reset {
+            background-color: aquamarine;
+        }
+
+        .increase {
+            background-color: aquamarine;
+        }
+
+        .decrease:hover {
+            background-color: blueviolet;
+            font-size: 20px;
+        }
+
+        .increase:hover {
+            background-color: blueviolet;
+            font-size: 20px;
+        }
+
+        .reset:hover {
+            background-color: blueviolet;
+            font-size: 20px;
+        }
+    h1:hover{
+                        background-color: blueviolet;
+                font-size: 20px;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="counter">
+        <h1>Simple counter</h1>
+        <div id="count">10</div>
+        <button class="decrease" onclick="changecount()">-</button>
+        <button class="reset" onclick="resetcount()">Reset</button>
+        <button class="increase" onclick="Chcount()">+</button>
+    </div>
+    <script>
+        function changecount() {
+            let ele = document.getElementById("count")
+            let value = ele.textContent
+            value = value - 1
+            console.log(value);
+            ele.innerText = value
+        }
+        function resetcount() {
+            let ele = document.getElementById("count")
+            ele.innerText = 0;
+        }
+        function Chcount() {
+            let ele = document.getElementById("count")
+            let value = ele.textContent
+            value = parseInt(value) + 1
+            console.log(value);
+            ele.innerText = value
+        }
+    </script>
+</body>
+
+</html>
